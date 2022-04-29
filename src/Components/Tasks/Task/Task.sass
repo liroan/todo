@@ -1,0 +1,51 @@
+.item
+  display: flex
+  align-items: center
+  width: 100%
+  background: #fff
+  padding: 20px
+  font-size: 20px
+  position: relative
+  text-transform: uppercase
+  font-weight: 800
+  border-radius: 3px
+  color: #555
+  /* text-shadow: #222 1px 0 10px; */
+  font-style: italic
+  transition: 0.5s
+  cursor: pointer
+  &:hover .actions
+    opacity: 1
+
+
+
+.actions
+  transition: 1s
+  opacity: 0
+  display: flex
+  position: absolute
+  top: 12px
+  right: 15px
+
+.action__delete
+  margin-right: 5px
+  button
+    background: red
+
+.action__complete
+  button
+    background: greenyellow
+.action__back
+  button
+    background: dodgerblue
+.item__text
+  margin-left: 15px
+  word-break: break-all
+
+.item__completed
+  img
+    display: block
+    width: 30px
+    height: 30px
+
+
