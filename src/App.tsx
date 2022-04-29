@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {ChangeEvent, FC, useState} from 'react';
+import './app.sass';
+import plus from "./img/plus.png"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+
+import {observer} from "mobx-react-lite";
+import {inject} from "mobx-react";
+import Task from "./Components/Tasks/Task/Task";
+import Header from "./Components/Header/Header";
+import DataPanel from "./Components/DataPanel/DataPanel";
+import Tasks from './Components/Tasks/Tasks';
+
+
+
+
+const App:FC = () => {
+
+    return (
+        <div className="todo-list">
+            <Header />
+            <main className="todo-list__main-window main-window">
+                <div className="main-window__container container">
+                    <DataPanel />
+                    <Tasks />
+                </div>
+            </main>
+        </div>
+  )
 }
 
 export default App;
